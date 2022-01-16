@@ -1,5 +1,5 @@
 plugins {
-    id("com.android.application")
+    id("com.android.library")
     kotlin("android")
 }
 
@@ -8,12 +8,12 @@ android {
     buildToolsVersion = Config.buildToolsVersion
 
     defaultConfig {
-        applicationId = Config.applicationId
         minSdk = Config.minSdkVersion
         targetSdk = Config.targetSdkVersion
-        versionCode = Config.versionCode
-        versionName = Config.versionName
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildFeatures {
+        viewBinding = true
     }
 
     buildTypes {
@@ -38,11 +38,13 @@ android {
 
 dependencies {
     implementation(project(":persistence"))
-    implementation(project(":features:greatest1RM"))
+
     implementation(Dependencies.androidCoreKtx)
     implementation(Dependencies.appCompat)
-    implementation(Dependencies.materialDesign) //TODO DELETE
-    implementation(Dependencies.constraintLayout) //TODO DELETE
+    implementation(Dependencies.coroutines)
+    implementation(Dependencies.viewModelScope)
+    implementation(Dependencies.materialDesign)
+    implementation(Dependencies.constraintLayout)
     implementation(Dependencies.koin)
     testImplementation(Dependencies.junit)
 }
