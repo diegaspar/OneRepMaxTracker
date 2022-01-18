@@ -6,7 +6,8 @@
       <module name="OneRepMaxTracker.buildSrc" target="11" />
       <module name="OneRepMaxTracker.core-base" target="11" />
       <module name="OneRepMaxTracker.features.greatest1RM" target="11" />
-      <module name="OneRepMaxTracker.persistence" target="11" />
+      <module name="OneRepMaxTracker.persistence.asset" target="11" />
+      <module name="OneRepMaxTracker.persistence.database-room" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

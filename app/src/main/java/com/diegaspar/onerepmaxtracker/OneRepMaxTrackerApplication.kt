@@ -1,10 +1,10 @@
 package com.diegaspar.onerepmaxtracker
 
 import android.app.Application
+import com.diegaspar.asset.di.persistenceAssetModule
+import com.diegaspar.database_room.di.databaseModule
 import com.diegaspar.greatest1rm.di.greatest1RMListModule
-import com.diegaspar.persistence.persistenceModule
 import org.koin.android.ext.koin.androidContext
-import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.GlobalContext.startKoin
 
 class OneRepMaxTrackerApplication : Application() {
@@ -15,10 +15,10 @@ class OneRepMaxTrackerApplication : Application() {
 
     private fun setupKoin() {
         startKoin {
-            androidLogger()
             androidContext(this@OneRepMaxTrackerApplication)
             modules(
-                persistenceModule,
+                persistenceAssetModule,
+                databaseModule,
                 greatest1RMListModule
             )
         }

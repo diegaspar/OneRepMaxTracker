@@ -1,7 +1,7 @@
-package com.diegaspar.persistence.data
+package com.diegaspar.asset.data
 
 import android.content.Context
-import com.diegaspar.persistence.model.WorkOutFromFile
+import com.diegaspar.asset.model.WorkOutFromFile
 
 
 const val workOutDataFileName = "workoutData.txt"

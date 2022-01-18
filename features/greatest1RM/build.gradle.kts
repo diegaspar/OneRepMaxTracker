@@ -26,6 +26,8 @@ android {
         }
     }
     compileOptions {
+        // Flag to enable support for the new language APIs
+        isCoreLibraryDesugaringEnabled = true
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
@@ -37,7 +39,9 @@ android {
 }
 
 dependencies {
-    implementation(project(":persistence"))
+    implementation(project(":persistence:asset"))
+    implementation(project(":persistence:database-room"))
+    implementation(project(":libraries:oneRepMax"))
 
     implementation(Dependencies.androidCoreKtx)
     implementation(Dependencies.appCompat)
@@ -47,4 +51,6 @@ dependencies {
     implementation(Dependencies.constraintLayout)
     implementation(Dependencies.koin)
     testImplementation(Dependencies.junit)
+
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:1.1.5")
 }

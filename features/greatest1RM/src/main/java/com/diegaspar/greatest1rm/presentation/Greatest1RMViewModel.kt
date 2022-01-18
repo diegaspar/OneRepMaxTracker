@@ -2,15 +2,16 @@ package com.diegaspar.greatest1rm.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.diegaspar.persistence.data.WorkOutFileDataSource
+import com.diegaspar.greatest1rm.domain.usecase.GetListOfExercisesRepMax
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class Greatest1RMViewModel(private val workOutFileDataSource: WorkOutFileDataSource) : ViewModel() {
+class Greatest1RMViewModel(private val getListOfExercisesRepMax: GetListOfExercisesRepMax) :
+    ViewModel() {
 
     fun getDataFromFile() {
         viewModelScope.launch(Dispatchers.IO) {
-            val a = workOutFileDataSource.extractWorkoutDataFromFile()
+            val a = getListOfExercisesRepMax.invoke()
             a.size
         }
     }

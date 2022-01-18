@@ -1,4 +1,4 @@
-package com.diegaspar.persistence.model
+package com.diegaspar.asset.model
 
 data class WorkOutFromFile(
     val date: String,

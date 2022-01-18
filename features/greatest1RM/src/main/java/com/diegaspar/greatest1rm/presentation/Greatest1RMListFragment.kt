@@ -31,9 +31,4 @@ class Greatest1RMListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         viewModel.getDataFromFile()
     }
-
-    companion object {
-        @JvmStatic
-        fun newInstance() = Greatest1RMListFragment()
-    }
 }

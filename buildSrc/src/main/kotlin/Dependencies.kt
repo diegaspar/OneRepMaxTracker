@@ -10,6 +10,9 @@ object Dependencies {
     val viewModelScope by lazy { "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.viewModelScope}" }
     val kotlin by lazy { "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${Versions.kotlin}" }
     val koin by lazy { "io.insert-koin:koin-android:${Versions.koin}" }
+    val room by lazy { "androidx.room:room-runtime:${Versions.room}" }
+    val roomCoroutines by lazy { "androidx.room:room-ktx:${Versions.room}" }
+    val roomKapt by lazy { "androidx.room:room-compiler:${Versions.room}" }
     val materialDesign by lazy { "com.google.android.material:material:${Versions.material}" }
     val constraintLayout by lazy { "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}" }
     val junit by lazy { "junit:junit:${Versions.jUnit}" }
