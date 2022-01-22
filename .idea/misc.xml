@@ -5,14 +5,17 @@
       <map>
         <entry key="../../../../layout/custom_preview.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2513586956521739" />
+        <entry key="core-base/ui/src/main/res/drawable/ic_baseline_more_vert_24.xml" value="0.19907407407407407" />
         <entry key="core-base/ui/src/main/res/layout/custom_action_bar_layout.xml" value="0.2947916666666667" />
-        <entry key="features/greatest1RM/src/main/res/layout/activity_main.xml" value="0.2947916666666667" />
+        <entry key="features/detailGreatest1RM/src/main/res/layout/detail_activity.xml" value="0.30885416666666665" />
+        <entry key="features/detailGreatest1RM/src/main/res/layout/fragment_detail.xml" value="0.1" />
+        <entry key="features/greatest1RM/src/main/res/layout/activity_main.xml" value="0.13836477987421383" />
         <entry key="features/greatest1RM/src/main/res/layout/fragment_greatest1_r_m_list.xml" value="0.2947916666666667" />
         <entry key="features/greatest1RM/src/main/res/layout/one_rep_max_view_holder.xml" value="0.45" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

@@ -18,7 +18,7 @@ class OneRepMaxAdapter(
 ) : RecyclerView.Adapter<OneRepMaxAdapter.ViewHolder>() {
 
     interface ViewHolderListener {
-        fun onItemClicked(name: String)
+        fun onItemClicked(name: String, oneRepMax: Int)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -32,7 +32,7 @@ class OneRepMaxAdapter(
         holder.exerciseName.text = item.name
         holder.oneRepMax.text = item.oneRepMax.toString()
         holder.root.setOnClickListener {
-            listener.onItemClicked(item.name)
+            listener.onItemClicked(item.name, item.oneRepMax)
         }
     }
 

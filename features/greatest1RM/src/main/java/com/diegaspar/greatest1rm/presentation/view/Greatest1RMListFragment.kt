@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.diegaspar.context.ext.newActivityInstance
 import com.diegaspar.greatest1rm.databinding.FragmentGreatest1RMListBinding
 import com.diegaspar.greatest1rm.presentation.adapter.OneRepMaxAdapter
 import com.diegaspar.greatest1rm.presentation.model.OneRepMaxUI
@@ -15,6 +16,9 @@ import com.diegaspar.greatest1rm.presentation.state.Greatest1RMListState
 import com.diegaspar.greatest1rm.presentation.state.LoadingState
 import com.diegaspar.greatest1rm.presentation.state.SuccessState
 import com.diegaspar.greatest1rm.presentation.viewmodel.Greatest1RMViewModel
+import com.diegaspar.navigation.Navigation.DETAIL_ACTIVITY
+import com.diegaspar.navigation.NavigationParams.EXERCISE_NAME
+import com.diegaspar.navigation.NavigationParams.ONE_REP_MAX
 import com.diegaspar.ui.gone
 import com.diegaspar.ui.visible
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -41,6 +45,10 @@ class Greatest1RMListFragment : Fragment(), OneRepMaxAdapter.ViewHolderListener 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupUI()
+        setupViewModel()
+    }
+
+    private fun setupViewModel() {
         viewModel.liveState.observe(viewLifecycleOwner) { state -> render(state) }
         viewModel.getOneRepMaxData()
     }
@@ -49,7 +57,6 @@ class Greatest1RMListFragment : Fragment(), OneRepMaxAdapter.ViewHolderListener 
         binding?.retryButton?.setOnClickListener {
             viewModel.getOneRepMaxData()
         }
-
     }
 
     private fun render(state: Greatest1RMListState?) {
@@ -87,7 +94,13 @@ class Greatest1RMListFragment : Fragment(), OneRepMaxAdapter.ViewHolderListener 
         binding?.recyclerView?.gone()
     }
 
-    override fun onItemClicked(name: String) {
-        //TODO Go to detail Graph Activity
+    override fun onItemClicked(name: String, oneRepMax: Int) {
+        context?.startActivity(
+            context?.newActivityInstance(
+                DETAIL_ACTIVITY,
+                Pair(EXERCISE_NAME, name),
+                Pair(ONE_REP_MAX, oneRepMax)
+            )
+        )
     }
 }

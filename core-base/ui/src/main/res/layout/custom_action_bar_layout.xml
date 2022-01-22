@@ -11,8 +11,9 @@
         android:id="@+id/left_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:foreground="?attr/selectableItemBackground"
+        android:background="?attr/selectableItemBackgroundBorderless"
         android:visibility="gone"
+        tools:ignore="ContentDescription"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -36,12 +37,13 @@
         android:id="@+id/right_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:foreground="?attr/selectableItemBackground"
+        android:background="?attr/selectableItemBackgroundBorderless"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:src="@drawable/ic_baseline_more_vert_24"
+        tools:ignore="ContentDescription"
         tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
