@@ -7,18 +7,20 @@ import com.diegaspar.greatest1rm.domain.Greatest1RMRepository
 import com.diegaspar.greatest1rm.domain.Greatest1RMRepositoryImpl
 import com.diegaspar.greatest1rm.domain.mapper.LocalDataBaseToDomainMapper
 import com.diegaspar.greatest1rm.domain.usecase.GetListOfExercisesRepMax
-import com.diegaspar.greatest1rm.presentation.Greatest1RMViewModel
+import com.diegaspar.greatest1rm.presentation.mapper.OneRepMaxDomainToUIMapper
+import com.diegaspar.greatest1rm.presentation.viewmodel.Greatest1RMViewModel
 import com.diegaspar.onerepmax.OneRepMaxCalculator
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 val greatest1RMListModule = module {
-    viewModel { Greatest1RMViewModel(get()) }
+    viewModel { Greatest1RMViewModel(get(), get()) }
     single { GetListOfExercisesRepMax(get()) }
     single<Greatest1RMRepository> { Greatest1RMRepositoryImpl(get(), get(), get(), get()) }
     single<Greatest1RMLocalDataSource> { Greatest1RMLocalDataSourceImpl(get()) }
 
     single { LocalDataBaseToDomainMapper() }
+    single { OneRepMaxDomainToUIMapper() }
     single { FileToLocalDataBaseMapper(get()) }
     single { OneRepMaxCalculator() }
 }

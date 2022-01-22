@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context="com.diegaspar.greatest1rm.presentation.view.Greatest1RMListActivity">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container_view"
-        android:name="com.diegaspar.greatest1rm.presentation.Greatest1RMListFragment"
+        android:name="com.diegaspar.greatest1rm.presentation.view.Greatest1RMListFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"

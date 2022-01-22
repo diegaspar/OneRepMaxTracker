@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/dark"
+    android:foreground="?attr/selectableItemBackground">
+
+    <TextView
+        android:id="@+id/exercise_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/padding_row"
+        android:paddingTop="@dimen/padding_row"
+        android:textColor="@color/white"
+        android:textSize="@dimen/big_text_size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Back Squat" />
+
+    <TextView
+        android:id="@+id/one_rm_record_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTopText"
+        android:paddingStart="@dimen/padding_row"
+        android:paddingBottom="@dimen/padding_row"
+        android:text="@string/one_rm_record"
+        android:textColor="@color/grey"
+        app:layout_constraintStart_toStartOf="@id/exercise_name_text"
+        app:layout_constraintTop_toBottomOf="@id/exercise_name_text" />
+
+    <TextView
+        android:id="@+id/one_rep_max_value_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/padding_row"
+        android:paddingEnd="@dimen/padding_row"
+        android:textColor="@color/white"
+        android:textSize="@dimen/big_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="215" />
+
+    <TextView
+        android:id="@+id/one_rep_max_lbs_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTopText"
+        android:paddingEnd="@dimen/padding_row"
+        android:paddingBottom="@dimen/padding_row"
+        android:text="@string/lbs"
+        android:textColor="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/one_rep_max_value_text" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,5 +1,5 @@
 plugins {
-    id("com.android.application")
+    id("com.android.library")
     kotlin("android")
 }
 
@@ -8,14 +8,10 @@ android {
     buildToolsVersion = Config.buildToolsVersion
 
     defaultConfig {
-        applicationId = Config.applicationId
         minSdk = Config.minSdkVersion
         targetSdk = Config.targetSdkVersion
-        versionCode = Config.versionCode
-        versionName = Config.versionName
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
-
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
@@ -37,11 +33,8 @@ android {
 }
 
 dependencies {
-    implementation(project(":persistence:asset"))
-    implementation(project(":persistence:database-room"))
-    implementation(project(":features:greatest1RM"))
-    implementation(project(":core-base:ui"))
     implementation(Dependencies.androidCoreKtx)
     implementation(Dependencies.appCompat)
-    implementation(Dependencies.koin)
+    implementation(Dependencies.materialDesign)
+    implementation(Dependencies.constraintLayout)
 }

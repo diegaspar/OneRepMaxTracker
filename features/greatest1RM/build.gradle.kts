@@ -42,6 +42,7 @@ dependencies {
     implementation(project(":persistence:asset"))
     implementation(project(":persistence:database-room"))
     implementation(project(":libraries:oneRepMax"))
+    implementation(project(":core-base:ui"))
 
     implementation(Dependencies.androidCoreKtx)
     implementation(Dependencies.appCompat)
@@ -52,5 +53,5 @@ dependencies {
     implementation(Dependencies.koin)
     testImplementation(Dependencies.junit)
 
-    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:1.1.5")
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:1.1.5") //TODO Do we need this ?
 }
