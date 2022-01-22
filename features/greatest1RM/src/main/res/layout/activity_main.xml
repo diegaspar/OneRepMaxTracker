@@ -6,14 +6,24 @@
     android:layout_height="match_parent"
     tools:context="com.diegaspar.greatest1rm.presentation.view.Greatest1RMListActivity">
 
+    <com.diegaspar.ui.CustomActionBar
+        android:id="@+id/customActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:icon_left="@drawable/ic_baseline_menu_24"
+        app:icon_right="@drawable/ic_baseline_more_vert_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container_view"
         android:name="com.diegaspar.greatest1rm.presentation.view.Greatest1RMListFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/customActionBar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

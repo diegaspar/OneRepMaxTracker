@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/actionBarSize"
+    android:background="@color/red"
+    android:padding="@dimen/action_bar_padding">
+
+    <ImageView
+        android:id="@+id/left_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foreground="?attr/selectableItemBackground"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_baseline_menu_24"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/action_bar_title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/action_bar_padding"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/left_icon"
+        app:layout_constraintStart_toEndOf="@id/left_icon"
+        app:layout_constraintTop_toTopOf="@+id/left_icon"
+        tools:text="Some Detail Or Text"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/right_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foreground="?attr/selectableItemBackground"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_baseline_more_vert_24"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

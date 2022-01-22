@@ -7,6 +7,10 @@ android {
     compileSdk = Config.compileSdkVersion
     buildToolsVersion = Config.buildToolsVersion
 
+    buildFeatures {
+        viewBinding = true
+    }
+
     defaultConfig {
         minSdk = Config.minSdkVersion
         targetSdk = Config.targetSdkVersion
