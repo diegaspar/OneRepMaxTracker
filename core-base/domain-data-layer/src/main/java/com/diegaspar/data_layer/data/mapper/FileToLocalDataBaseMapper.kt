@@ -16,11 +16,4 @@ class FileToLocalDataBaseMapper(private val oneRepMaxCalculator: OneRepMaxCalcul
                 weight = workOutFromFile.weight
             ).toInt()
         )
-
-
-//    fun convertDate() { //TODO use it in case we need it
-//        val current = LocalDateTime.now()
-//        val formatter = DateTimeFormatter.ofPattern("MMM DD yyyy")
-//        var answer: String =  current.format(formatter)
-//    }
 }
