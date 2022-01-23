@@ -5,4 +5,9 @@
         <attr name="icon_left" format="integer" />
         <attr name="icon_right" format="integer" />
     </declare-styleable>
+
+    <declare-styleable name="OneRepMaxRow">
+        <attr name="exerciseName" format="string" />
+        <attr name="oneRepMax" format="string" />
+    </declare-styleable>
 </resources>

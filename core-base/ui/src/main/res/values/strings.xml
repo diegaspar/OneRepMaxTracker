@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">OneRepMaxTracker</string>
+    <string name="one_rm_record">1 RM Record</string>
+    <string name="lbs">lbs</string>
 </resources>

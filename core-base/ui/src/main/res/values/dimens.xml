@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="action_bar_padding">16dp</dimen>
+    <dimen name="marginTopText">4dp</dimen>
+    <dimen name="padding_row">16dp</dimen>
+    <dimen name="big_text_size">16sp</dimen>
 </resources>
