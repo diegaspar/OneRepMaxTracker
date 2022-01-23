@@ -34,7 +34,8 @@ class Greatest1RMDetailViewModel(
                 SuccessState(
                     getRecordExercisesByName
                         .invoke(GetRecordExercisesByName.Params(exerciseName = exerciseName))
-                        .map { mapper.map(it) })
+                        .map { mapper.map(it) }
+                        .sortedBy { it.x })
             )
         }
     }

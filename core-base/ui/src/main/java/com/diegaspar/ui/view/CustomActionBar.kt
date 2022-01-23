@@ -1,4 +1,4 @@
-package com.diegaspar.ui
+package com.diegaspar.ui.view
 
 import android.content.Context
 import android.graphics.drawable.Drawable
@@ -7,7 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
+import com.diegaspar.ui.R
 import com.diegaspar.ui.databinding.CustomActionBarLayoutBinding
+import com.diegaspar.ui.ext.gone
+import com.diegaspar.ui.ext.visible
 
 class CustomActionBar @JvmOverloads constructor(
     context: Context,

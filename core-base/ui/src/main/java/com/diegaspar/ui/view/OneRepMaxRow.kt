@@ -1,9 +1,10 @@
-package com.diegaspar.ui
+package com.diegaspar.ui.view
 
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.LinearLayout
+import com.diegaspar.ui.R
 import com.diegaspar.ui.databinding.OneRepMaxRowBinding
 
 class OneRepMaxRow @JvmOverloads constructor(

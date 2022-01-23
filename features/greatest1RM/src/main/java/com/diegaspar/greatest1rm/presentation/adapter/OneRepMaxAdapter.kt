@@ -7,7 +7,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.diegaspar.greatest1rm.R
 import com.diegaspar.greatest1rm.presentation.model.OneRepMaxUI
-import com.diegaspar.ui.OneRepMaxRow
+import com.diegaspar.ui.view.OneRepMaxRow
 
 /**
  * [RecyclerView.Adapter] that can display a [OneRepMaxUI].

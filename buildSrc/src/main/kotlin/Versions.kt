@@ -11,6 +11,8 @@ object Versions {
     const val room = "2.4.1"
     const val material = "1.3.0"
     const val constraintLayout = "2.0.4"
+    const val mpaAndroidChart = "3.1.0"
+    const val desugar = "1.1.5"
 
     const val jUnit = "4.12"
 }

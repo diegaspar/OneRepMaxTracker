@@ -17,6 +17,8 @@ object Dependencies {
 
     val materialDesign by lazy { "com.google.android.material:material:${Versions.material}" }
     val constraintLayout by lazy { "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}" }
+    val mpaAndroidChart by lazy { "com.github.PhilJay:MPAndroidChart:${Versions.mpaAndroidChart}" }
+    val desugar by lazy { "com.android.tools:desugar_jdk_libs:${Versions.desugar}" }
 
     val junit by lazy { "junit:junit:${Versions.jUnit}" }
 }

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.diegaspar.greatest1rm.presentation.view.Greatest1RMListActivity">
 
-    <com.diegaspar.ui.CustomActionBar
+    <com.diegaspar.ui.view.CustomActionBar
         android:id="@+id/customActionBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

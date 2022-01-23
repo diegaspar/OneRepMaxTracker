@@ -7,7 +7,7 @@
     android:background="@color/dark"
     android:foreground="?attr/selectableItemBackground">
 
-    <com.diegaspar.ui.OneRepMaxRow
+    <com.diegaspar.ui.view.OneRepMaxRow
         android:id="@+id/oneRepMax_row"
         android:layout_width="0dp"
         android:layout_height="wrap_content"

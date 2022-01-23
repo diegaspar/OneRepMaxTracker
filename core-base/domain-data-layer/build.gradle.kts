@@ -45,6 +45,4 @@ dependencies {
     implementation(Dependencies.coroutines)
     implementation(Dependencies.koin)
     testImplementation(Dependencies.junit)
-
-    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:1.1.5") //TODO Do we need this ?
 }

@@ -1,4 +1,4 @@
-package com.diegaspar.ui
+package com.diegaspar.ui.ext
 
 import android.view.View
 

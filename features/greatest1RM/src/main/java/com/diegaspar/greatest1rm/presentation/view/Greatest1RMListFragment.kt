@@ -19,8 +19,8 @@ import com.diegaspar.greatest1rm.presentation.viewmodel.Greatest1RMViewModel
 import com.diegaspar.navigation.Navigation.DETAIL_ACTIVITY
 import com.diegaspar.navigation.NavigationParams.EXERCISE_NAME
 import com.diegaspar.navigation.NavigationParams.ONE_REP_MAX
-import com.diegaspar.ui.gone
-import com.diegaspar.ui.visible
+import com.diegaspar.ui.ext.gone
+import com.diegaspar.ui.ext.visible
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 

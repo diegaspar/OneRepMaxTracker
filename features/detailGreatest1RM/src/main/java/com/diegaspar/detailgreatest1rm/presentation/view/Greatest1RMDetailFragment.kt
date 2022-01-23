@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.diegaspar.detailgreatest1rm.databinding.FragmentDetailBinding
-import com.diegaspar.detailgreatest1rm.presentation.model.OneRepDetail
+import com.diegaspar.detailgreatest1rm.presentation.chart.setupStyleProperties
 import com.diegaspar.detailgreatest1rm.presentation.state.ErrorState
 import com.diegaspar.detailgreatest1rm.presentation.state.Greatest1RMDetailState
 import com.diegaspar.detailgreatest1rm.presentation.state.LoadingState
@@ -15,9 +15,13 @@ import com.diegaspar.detailgreatest1rm.presentation.state.SuccessState
 import com.diegaspar.detailgreatest1rm.presentation.viewmodel.Greatest1RMDetailViewModel
 import com.diegaspar.navigation.NavigationParams.EXERCISE_NAME
 import com.diegaspar.navigation.NavigationParams.ONE_REP_MAX
-import com.diegaspar.ui.gone
-import com.diegaspar.ui.visible
+import com.diegaspar.ui.ext.gone
+import com.diegaspar.ui.ext.visible
+import com.github.mikephil.charting.data.Entry
+import com.github.mikephil.charting.data.LineData
+import com.github.mikephil.charting.data.LineDataSet
 import org.koin.androidx.viewmodel.ext.android.viewModel
+
 
 class Greatest1RMDetailFragment : Fragment() {
 
@@ -69,8 +73,20 @@ class Greatest1RMDetailFragment : Fragment() {
         }
     }
 
-    private fun showSuccessState(exercisesList: List<OneRepDetail>) {
+    private fun showSuccessState(exercisesList: List<Entry>) {
         binding?.progressBar?.gone()
+        val lineDataSet = LineDataSet(exercisesList, CHART_DATASET)
+        lineDataSet.apply {
+            setupStyleProperties(context)
+        }
+        setupChart(LineData(lineDataSet))
+    }
+
+    private fun setupChart(lineData: LineData) {
+        binding?.lineChart?.apply {
+            data = lineData
+            setupStyleProperties(context)
+        }
     }
 
     private fun showLoadingState() {
@@ -80,5 +96,9 @@ class Greatest1RMDetailFragment : Fragment() {
     private fun showErrorState(errorMessage: String) {
         binding?.progressBar?.gone()
         Toast.makeText(context, errorMessage, Toast.LENGTH_SHORT).show()
+    }
+
+    companion object {
+        const val CHART_DATASET = "chart Dataset"
     }
 }
