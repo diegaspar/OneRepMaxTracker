@@ -7,6 +7,10 @@ import com.github.mikephil.charting.charts.LineChart
 import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.LineDataSet
 
+const val textSizeChart = 12f
+const val lineWidthChart = 2f
+const val circleRadiusChart = 4f
+
 fun LineChart.setupStyleProperties(context: Context?) {
     this.apply {
         data = lineData
@@ -15,17 +19,18 @@ fun LineChart.setupStyleProperties(context: Context?) {
         setTouchEnabled(false)
         axisRight.apply {
             setDrawLabels(false)
+            setDrawAxisLine(false)
         }
         axisLeft.apply {
-            textSize = 12f
+            textSize = textSizeChart
             textColor = provideSafeColor(context, R.color.white)
-            setDrawAxisLine(true)
+            setDrawAxisLine(false)
             setDrawGridLines(true)
             valueFormatter = ChartYFormatter(resources.getString(R.string.lbs))
         }
         xAxis.apply {
             position = XAxis.XAxisPosition.BOTTOM
-            textSize = 12f
+            textSize = textSizeChart
             textColor = provideSafeColor(context, R.color.white)
             setDrawAxisLine(false)
             setDrawGridLines(true)
@@ -39,8 +44,8 @@ fun LineChart.setupStyleProperties(context: Context?) {
 
 fun LineDataSet.setupStyleProperties(context: Context?) {
     this.apply {
-        lineWidth = 2f
-        circleRadius = 4f
+        lineWidth = lineWidthChart
+        circleRadius = circleRadiusChart
         color = provideSafeColor(context, R.color.red)
         setCircleColor(provideSafeColor(context, R.color.red))
         circleHoleColor = provideSafeColor(context, R.color.red)
