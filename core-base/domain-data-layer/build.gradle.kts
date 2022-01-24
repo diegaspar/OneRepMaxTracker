@@ -44,5 +44,12 @@ dependencies {
     implementation(Dependencies.appCompat)
     implementation(Dependencies.coroutines)
     implementation(Dependencies.koin)
+
     testImplementation(Dependencies.junit)
+    testImplementation(Dependencies.mockitoInline)
+    testImplementation(Dependencies.mockitoKotlin)
+    testImplementation(Dependencies.kluent)
+    testImplementation(Dependencies.coroutinesTest)
+    testImplementation(Dependencies.arch)
+    testImplementation(project(":core-base:test"))
 }

@@ -10,6 +10,14 @@ import com.diegaspar.detailgreatest1rm.presentation.state.LoadingState
 import com.diegaspar.detailgreatest1rm.presentation.state.SuccessState
 import com.diegaspar.detailgreatest1rm.presentation.viewmodel.Greatest1RMDetailViewModel
 import com.diegaspar.test.CoroutineTestRule
+import com.diegaspar.test.TestValues.anyDate
+import com.diegaspar.test.TestValues.anyDateOlder
+import com.diegaspar.test.TestValues.anyName
+import com.diegaspar.test.TestValues.firstXEntryValue
+import com.diegaspar.test.TestValues.firstYEntryValue
+import com.diegaspar.test.TestValues.repMax
+import com.diegaspar.test.TestValues.secondXEntryValue
+import com.diegaspar.test.TestValues.secondYEntryValue
 import com.github.mikephil.charting.data.Entry
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
@@ -89,16 +97,5 @@ class Greatest1RMDetailViewModelTest {
                 assert((secondValue as SuccessState).exercisesList.last().y == secondYEntryValue)
             }
         }
-
-    companion object {
-        const val anyDate = "Apr 11 2022"
-        const val anyDateOlder = "Apr 11 2023"
-        const val anyName = "Chest Exercise"
-        const val repMax = 223
-        const val firstXEntryValue = 2f
-        const val firstYEntryValue = 3f
-        const val secondXEntryValue = 4f
-        const val secondYEntryValue = 4f
-    }
 
 }

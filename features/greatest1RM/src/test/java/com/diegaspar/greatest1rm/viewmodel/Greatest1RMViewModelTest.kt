@@ -5,21 +5,22 @@ import androidx.lifecycle.Observer
 import com.diegaspar.data_layer.model.OneRepMaxDomain
 import com.diegaspar.greatest1rm.domain.usecase.GetListOfExercisesRepMax
 import com.diegaspar.greatest1rm.presentation.mapper.OneRepMaxDomainToUIMapper
+import com.diegaspar.greatest1rm.presentation.state.ErrorState
 import com.diegaspar.greatest1rm.presentation.state.Greatest1RMListState
 import com.diegaspar.greatest1rm.presentation.state.LoadingState
 import com.diegaspar.greatest1rm.presentation.state.SuccessState
 import com.diegaspar.greatest1rm.presentation.viewmodel.Greatest1RMViewModel
 import com.diegaspar.test.CoroutineTestRule
+import com.diegaspar.test.TestValues.anyDate
+import com.diegaspar.test.TestValues.anyName
+import com.diegaspar.test.TestValues.repMax
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.rules.TestRule
-import org.mockito.kotlin.inOrder
-import org.mockito.kotlin.mock
-import org.mockito.kotlin.verify
-import org.mockito.kotlin.whenever
+import org.mockito.kotlin.*
 
 @ExperimentalCoroutinesApi
 class Greatest1RMViewModelTest {
@@ -76,10 +77,20 @@ class Greatest1RMViewModelTest {
             }
         }
 
-    companion object {
-        const val anyDate = "Apr 11 2022"
-        const val anyName = "Chest Exercise"
-        const val repMax = 223
-    }
+    @Test
+    fun `should get ErrorState when getOneRepMaxData is triggered and the response has any error`() =
+        runTest {
+            // Given
+            whenever(getListOfExercisesRepMax.invoke()).thenAnswer { Exception() }
 
+            // When
+            viewModel.getOneRepMaxData()
+
+            // Then
+            argumentCaptor<Greatest1RMListState>().run {
+                verify(stateObserver, times(2)).onChanged(this.capture())
+                assert(firstValue is LoadingState)
+                assert(secondValue is ErrorState)
+            }
+        }
 }
