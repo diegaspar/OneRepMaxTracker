@@ -15,4 +15,9 @@ object Versions {
     const val desugar = "1.1.5"
 
     const val jUnit = "4.12"
+    const val coroutinesTest = "1.6.0"
+    const val mockitoKotlin = "4.0.0"
+    const val mockitoInline = "4.1.0"
+    const val kluent = "1.68"
+    const val arch = "2.1.0"
 }

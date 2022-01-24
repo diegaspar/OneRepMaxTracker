@@ -21,4 +21,9 @@ object Dependencies {
     val desugar by lazy { "com.android.tools:desugar_jdk_libs:${Versions.desugar}" }
 
     val junit by lazy { "junit:junit:${Versions.jUnit}" }
+    val coroutinesTest by lazy { "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.coroutinesTest}" }
+    val mockitoKotlin by lazy { "org.mockito.kotlin:mockito-kotlin:${Versions.mockitoKotlin}" }
+    val mockitoInline by lazy { "org.mockito:mockito-inline:${Versions.mockitoInline}" }
+    val kluent by lazy { "org.amshove.kluent:kluent-android:${Versions.kluent}" }
+    val arch by lazy { "androidx.arch.core:core-testing:${Versions.arch}" }
 }

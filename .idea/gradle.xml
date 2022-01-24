@@ -17,6 +17,7 @@
             <option value="$PROJECT_DIR$/core-base/context" />
             <option value="$PROJECT_DIR$/core-base/domain-data-layer" />
             <option value="$PROJECT_DIR$/core-base/navigation" />
+            <option value="$PROJECT_DIR$/core-base/test" />
             <option value="$PROJECT_DIR$/core-base/ui" />
             <option value="$PROJECT_DIR$/features" />
             <option value="$PROJECT_DIR$/features/detailGreatest1RM" />

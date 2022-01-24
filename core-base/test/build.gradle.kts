@@ -39,27 +39,6 @@ android {
 }
 
 dependencies {
-    implementation(project(":persistence:asset"))
-    implementation(project(":persistence:database-room"))
-    implementation(project(":core-base:context"))
-    implementation(project(":core-base:domain-data-layer"))
-    implementation(project(":core-base:ui"))
-    implementation(project(":core-base:navigation"))
-
-    implementation(Dependencies.androidCoreKtx)
-    implementation(Dependencies.appCompat)
-    implementation(Dependencies.coroutines)
-    implementation(Dependencies.viewModelScope)
-    implementation(Dependencies.materialDesign)
-    implementation(Dependencies.constraintLayout)
-    implementation(Dependencies.koin)
-
-    testImplementation(Dependencies.junit)
-    testImplementation(Dependencies.mockitoInline)
-    testImplementation(Dependencies.mockitoKotlin)
-    testImplementation(Dependencies.kluent)
-    testImplementation(Dependencies.coroutinesTest)
-    testImplementation(Dependencies.arch)
-    testImplementation(project(":core-base:test"))
-
+    implementation(Dependencies.coroutinesTest)
+    implementation(Dependencies.arch)
 }

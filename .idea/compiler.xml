@@ -6,6 +6,7 @@
       <module name="OneRepMaxTracker.buildSrc" target="11" />
       <module name="OneRepMaxTracker.core-base.context" target="11" />
       <module name="OneRepMaxTracker.core-base.domain-data-layer" target="11" />
+      <module name="OneRepMaxTracker.core-base.test" target="11" />
       <module name="OneRepMaxTracker.core-base.ui" target="11" />
       <module name="OneRepMaxTracker.features.detailGreatest1RM" target="11" />
       <module name="OneRepMaxTracker.features.greatest1RM" target="11" />
