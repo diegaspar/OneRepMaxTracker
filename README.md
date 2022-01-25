@@ -16,6 +16,29 @@ In the detail of each oneRepMax exercise, shows a graph with all the ORM history
 - [Espresso](https://developer.android.com/training/testing/espresso)
 - [Mockito](https://site.mockito.org/)
 
+# Modules Architecture 
+## App
+App contains Application and knows all the other modules, it is in charge of initialising Koin.
+No other module knows App
+
+## buildSrc
+Everything related to Dependencies and Kotlin DSL implementation
+
+## core-base
+- **context** > Context Extensions 
+- **navigation** > This module contains everything related to know about navigation, any feature module doesn't have to know about other features.
+- **test** > Everything related to common test functions, rules or shared elements for Testing purposes.
+- **ui** > Everything related to common-ui resources, extensions and reusable views that can be used along the project
+- **domain-data-layer** > Every common class from these layers that is used or needed in any of the 2 different features
+
+## features
+- **detailGreatest1RM** > Related to get the one rep max record for each different exercise
+- **detailGreatest1RM** > Everything related to the detail and record line chart of one rep max exercise
+
+
+
+----
+
 ## MUST TODO IN FUTURE
 - Clean and unify the gradle.kts files
 - Add more tests
