@@ -75,6 +75,7 @@ class Greatest1RMDetailFragment : Fragment() {
 
     private fun showSuccessState(exercisesList: List<Entry>) {
         binding?.progressBar?.gone()
+        binding?.lineChart?.visible()
         val lineDataSet = LineDataSet(exercisesList, CHART_DATASET)
         lineDataSet.apply {
             setupStyleProperties(context)
@@ -91,10 +92,12 @@ class Greatest1RMDetailFragment : Fragment() {
 
     private fun showLoadingState() {
         binding?.progressBar?.visible()
+        binding?.lineChart?.gone()
     }
 
     private fun showErrorState(errorMessage: String) {
         binding?.progressBar?.gone()
+        binding?.lineChart?.gone()
         Toast.makeText(context, errorMessage, Toast.LENGTH_SHORT).show()
     }
 

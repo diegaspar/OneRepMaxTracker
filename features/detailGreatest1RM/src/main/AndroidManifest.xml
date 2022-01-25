@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="com.diegaspar.detailgreatest1rm">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.diegaspar.detailgreatest1rm">
 
+    <application>
+        <activity
+            android:name="com.diegaspar.detailgreatest1rm.presentation.view.DetailActivity"
+            android:theme="@style/Theme.OneRepMaxTracker" />
+    </application>
 </manifest>

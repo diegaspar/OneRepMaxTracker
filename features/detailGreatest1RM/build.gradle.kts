@@ -61,4 +61,14 @@ dependencies {
     testImplementation(Dependencies.coroutinesTest)
     testImplementation(Dependencies.arch)
     testImplementation(project(":core-base:test"))
+
+    androidTestImplementation(Dependencies.koinTest)
+    androidTestImplementation(Dependencies.mockitoAndroidInline)
+    androidTestImplementation(Dependencies.mockitoCore)
+    androidTestImplementation(Dependencies.espresso)
+    androidTestImplementation(Dependencies.espressoContrib)
+    androidTestImplementation(Dependencies.espressoIntents)
+    androidTestImplementation(Dependencies.jUnitAndroid)
+    androidTestImplementation(Dependencies.testRules)
+    androidTestImplementation(Dependencies.testRunner)
 }
