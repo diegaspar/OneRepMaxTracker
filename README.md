@@ -4,6 +4,13 @@ In the detail of each oneRepMax exercise, shows a graph with all the ORM history
 
 ![Screen Recording 2022-01-25 at 18 04 00](https://user-images.githubusercontent.com/45268196/151024598-5d313df8-26a6-45cf-a24c-f638f8178ae5.gif)
 
+## Clean Architecture based on : 
+- **View**
+- **ViewModel**
+- **useCase**
+- **Repository**
+- **DataSources**
+
 
 ## Main libraries used
 - [Kotlin](https://kotlinlang.org/docs/reference/)
@@ -35,7 +42,12 @@ Everything related to Dependencies and Kotlin DSL implementation
 - **detailGreatest1RM** > Related to get the one rep max record for each different exercise
 - **detailGreatest1RM** > Everything related to the detail and record line chart of one rep max exercise
 
+## libraries
+- **oneRepMax** > Used to calculate the ORM based on Brzycki Formula
 
+## persitence
+- **asset** > Everything related to the file extraction data
+- **database-room** > Everything related to Room, to have it well abstracted
 
 ----
 
