@@ -40,7 +40,7 @@ Everything related to Dependencies and Kotlin DSL implementation
 
 ## features
 - **detailGreatest1RM** > Related to get the one rep max record for each different exercise
-- **detailGreatest1RM** > Everything related to the detail and record line chart of one rep max exercise
+- **greatest1RM** > Everything related to the detail and record line chart of one rep max exercise
 
 ## libraries
 - **oneRepMax** > Used to calculate the ORM based on Brzycki Formula
