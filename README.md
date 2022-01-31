@@ -39,8 +39,8 @@ Everything related to Dependencies and Kotlin DSL implementation
 - **domain-data-layer** > Every common class from these layers that is used or needed in any of the 2 different features
 
 ## features
-- **detailGreatest1RM** > Related to get the one rep max record for each different exercise
-- **greatest1RM** > Everything related to the detail and record line chart of one rep max exercise
+- **greatest1RM** > Related to get the one rep max record for each different exercise
+- **detailGreatest1RM** > Everything related to the detail and record line chart of one rep max exercise
 
 ## libraries
 - **oneRepMax** > Used to calculate the ORM based on Brzycki Formula
